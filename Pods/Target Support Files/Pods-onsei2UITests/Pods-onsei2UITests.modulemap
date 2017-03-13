@@ -1,0 +1,6 @@
+framework module Pods_onsei2UITests {
+  umbrella header "Pods-onsei2UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

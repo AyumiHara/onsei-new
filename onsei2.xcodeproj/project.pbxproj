@@ -1,0 +1,955 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		145880ACC2AEB78018F45885 /* Pods_onsei2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE33FB94936FF9D134F1734 /* Pods_onsei2.framework */; };
+		19D194C489B3AF481791BEA0 /* Pods_onsei2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89641406642DD35DA40BE22 /* Pods_onsei2UITests.framework */; };
+		1E1122661E627E26000519A5 /* icon_115481_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1122601E627E26000519A5 /* icon_115481_256.png */; };
+		1E1122671E627E26000519A5 /* icon_115501_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1122611E627E26000519A5 /* icon_115501_256.png */; };
+		1E1122681E627E26000519A5 /* icon_115541_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1122621E627E26000519A5 /* icon_115541_256.png */; };
+		1E1122691E627E26000519A5 /* icon_120931_256-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1122631E627E26000519A5 /* icon_120931_256-2.png */; };
+		1E11226A1E627E26000519A5 /* icon_120931_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1122641E627E26000519A5 /* icon_120931_256.png */; };
+		1E11226B1E627E26000519A5 /* icon_148101_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E1122651E627E26000519A5 /* icon_148101_256.png */; };
+		1E11226D1E69C1D2000519A5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11226C1E69C1D2000519A5 /* UserData.swift */; };
+		1E98E0C51E5AE3F50040A543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98E0C41E5AE3F50040A543 /* AppDelegate.swift */; };
+		1E98E0C71E5AE3F50040A543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98E0C61E5AE3F50040A543 /* ViewController.swift */; };
+		1E98E0CC1E5AE3F50040A543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E98E0CB1E5AE3F50040A543 /* Assets.xcassets */; };
+		1E98E0CF1E5AE3F50040A543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E98E0CD1E5AE3F50040A543 /* LaunchScreen.storyboard */; };
+		1E98E0DA1E5AE3F50040A543 /* onsei2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98E0D91E5AE3F50040A543 /* onsei2Tests.swift */; };
+		1E98E0E51E5AE3F50040A543 /* onsei2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98E0E41E5AE3F50040A543 /* onsei2UITests.swift */; };
+		1E98E0F31E5AE4060040A543 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98E0F21E5AE4060040A543 /* TableViewController.swift */; };
+		1E98E0F61E5AF3CF0040A543 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98E0F41E5AF3CF0040A543 /* TableViewCell.swift */; };
+		1E98E0F71E5AF3CF0040A543 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E98E0F51E5AF3CF0040A543 /* TableViewCell.xib */; };
+		1E98E0F91E5AFDC40040A543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E98E0F81E5AFDC40040A543 /* Main.storyboard */; };
+		1EEF3E1E1E5C779D0038D2D3 /* Australia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3DFA1E5C779D0038D2D3 /* Australia.png */; };
+		1EEF3E1F1E5C779D0038D2D3 /* Belgium.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3DFB1E5C779D0038D2D3 /* Belgium.png */; };
+		1EEF3E201E5C779D0038D2D3 /* Brazil.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3DFC1E5C779D0038D2D3 /* Brazil.png */; };
+		1EEF3E211E5C779D0038D2D3 /* Canada.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3DFD1E5C779D0038D2D3 /* Canada.png */; };
+		1EEF3E221E5C779D0038D2D3 /* China.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3DFE1E5C779D0038D2D3 /* China.png */; };
+		1EEF3E231E5C779D0038D2D3 /* Czech Republic.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3DFF1E5C779D0038D2D3 /* Czech Republic.png */; };
+		1EEF3E241E5C779D0038D2D3 /* Denmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E001E5C779D0038D2D3 /* Denmark.png */; };
+		1EEF3E251E5C779D0038D2D3 /* Finland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E011E5C779D0038D2D3 /* Finland.png */; };
+		1EEF3E261E5C779D0038D2D3 /* France.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E021E5C779D0038D2D3 /* France.png */; };
+		1EEF3E271E5C779D0038D2D3 /* Germany.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E031E5C779D0038D2D3 /* Germany.png */; };
+		1EEF3E281E5C779D0038D2D3 /* Greece.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E041E5C779D0038D2D3 /* Greece.png */; };
+		1EEF3E291E5C779D0038D2D3 /* Hong Kong.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E051E5C779D0038D2D3 /* Hong Kong.png */; };
+		1EEF3E2A1E5C779D0038D2D3 /* Hungary.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E061E5C779D0038D2D3 /* Hungary.png */; };
+		1EEF3E2B1E5C779D0038D2D3 /* India.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E071E5C779D0038D2D3 /* India.png */; };
+		1EEF3E2C1E5C779D0038D2D3 /* Indonesia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E081E5C779D0038D2D3 /* Indonesia.png */; };
+		1EEF3E2D1E5C779D0038D2D3 /* Ireland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E091E5C779D0038D2D3 /* Ireland.png */; };
+		1EEF3E2E1E5C779D0038D2D3 /* Italy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E0A1E5C779D0038D2D3 /* Italy.png */; };
+		1EEF3E2F1E5C779D0038D2D3 /* Japan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E0B1E5C779D0038D2D3 /* Japan.png */; };
+		1EEF3E301E5C779D0038D2D3 /* Korea.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E0C1E5C779D0038D2D3 /* Korea.png */; };
+		1EEF3E311E5C779D0038D2D3 /* Mexico.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E0D1E5C779D0038D2D3 /* Mexico.png */; };
+		1EEF3E321E5C779D0038D2D3 /* Netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E0E1E5C779D0038D2D3 /* Netherlands.png */; };
+		1EEF3E331E5C779D0038D2D3 /* Norway.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E0F1E5C779D0038D2D3 /* Norway.png */; };
+		1EEF3E341E5C779D0038D2D3 /* Poland.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E101E5C779D0038D2D3 /* Poland.png */; };
+		1EEF3E351E5C779D0038D2D3 /* Portugal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E111E5C779D0038D2D3 /* Portugal.png */; };
+		1EEF3E361E5C779D0038D2D3 /* Romania.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E121E5C779D0038D2D3 /* Romania.png */; };
+		1EEF3E371E5C779D0038D2D3 /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E131E5C779D0038D2D3 /* Russia.png */; };
+		1EEF3E381E5C779D0038D2D3 /* Saudi Arabia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E141E5C779D0038D2D3 /* Saudi Arabia.png */; };
+		1EEF3E391E5C779D0038D2D3 /* Slovakia.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E151E5C779D0038D2D3 /* Slovakia.png */; };
+		1EEF3E3A1E5C779D0038D2D3 /* South Africa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E161E5C779D0038D2D3 /* South Africa.png */; };
+		1EEF3E3B1E5C779D0038D2D3 /* Spain.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E171E5C779D0038D2D3 /* Spain.png */; };
+		1EEF3E3C1E5C779D0038D2D3 /* Sweden.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E181E5C779D0038D2D3 /* Sweden.png */; };
+		1EEF3E3D1E5C779D0038D2D3 /* Taiwan.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E191E5C779D0038D2D3 /* Taiwan.png */; };
+		1EEF3E3E1E5C779D0038D2D3 /* Thailand.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E1A1E5C779D0038D2D3 /* Thailand.png */; };
+		1EEF3E3F1E5C779D0038D2D3 /* Turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E1B1E5C779D0038D2D3 /* Turkey.png */; };
+		1EEF3E401E5C779D0038D2D3 /* United Kingdom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E1C1E5C779D0038D2D3 /* United Kingdom.png */; };
+		1EEF3E411E5C779D0038D2D3 /* United States.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E1D1E5C779D0038D2D3 /* United States.png */; };
+		1EEF3E481E5D96E60038D2D3 /* iconDownload.cgi-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E431E5D96E60038D2D3 /* iconDownload.cgi-2.png */; };
+		1EEF3E491E5D96E60038D2D3 /* iconDownload.cgi-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E441E5D96E60038D2D3 /* iconDownload.cgi-4.png */; };
+		1EEF3E4A1E5D96E60038D2D3 /* iconDownload.cgi-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E451E5D96E60038D2D3 /* iconDownload.cgi-6.png */; };
+		1EEF3E4B1E5D96E60038D2D3 /* iconDownload.cgi-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E461E5D96E60038D2D3 /* iconDownload.cgi-7.png */; };
+		1EEF3E4C1E5D96E60038D2D3 /* iconDownload.cgi.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EEF3E471E5D96E60038D2D3 /* iconDownload.cgi.png */; };
+		4F3CA6668B7D3175AB19166A /* Pods_onsei2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756702CCA959C55F939E5AA6 /* Pods_onsei2Tests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E98E0D61E5AE3F50040A543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E98E0B91E5AE3F50040A543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E98E0C01E5AE3F50040A543;
+			remoteInfo = onsei2;
+		};
+		1E98E0E11E5AE3F50040A543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E98E0B91E5AE3F50040A543 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E98E0C01E5AE3F50040A543;
+			remoteInfo = onsei2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		126569A3DCBE204FABA018CD /* Pods-onsei2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onsei2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-onsei2Tests/Pods-onsei2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1E1122601E627E26000519A5 /* icon_115481_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_115481_256.png; sourceTree = "<group>"; };
+		1E1122611E627E26000519A5 /* icon_115501_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_115501_256.png; sourceTree = "<group>"; };
+		1E1122621E627E26000519A5 /* icon_115541_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_115541_256.png; sourceTree = "<group>"; };
+		1E1122631E627E26000519A5 /* icon_120931_256-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_120931_256-2.png"; sourceTree = "<group>"; };
+		1E1122641E627E26000519A5 /* icon_120931_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120931_256.png; sourceTree = "<group>"; };
+		1E1122651E627E26000519A5 /* icon_148101_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_148101_256.png; sourceTree = "<group>"; };
+		1E11226C1E69C1D2000519A5 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		1E98E0C11E5AE3F50040A543 /* onsei2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onsei2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E98E0C41E5AE3F50040A543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E98E0C61E5AE3F50040A543 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E98E0CB1E5AE3F50040A543 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E98E0CE1E5AE3F50040A543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E98E0D01E5AE3F50040A543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E98E0D51E5AE3F50040A543 /* onsei2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onsei2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E98E0D91E5AE3F50040A543 /* onsei2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onsei2Tests.swift; sourceTree = "<group>"; };
+		1E98E0DB1E5AE3F50040A543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E98E0E01E5AE3F50040A543 /* onsei2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onsei2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E98E0E41E5AE3F50040A543 /* onsei2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onsei2UITests.swift; sourceTree = "<group>"; };
+		1E98E0E61E5AE3F50040A543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E98E0F21E5AE4060040A543 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1E98E0F41E5AF3CF0040A543 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1E98E0F51E5AF3CF0040A543 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		1E98E0F81E5AFDC40040A543 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1EEF3DFA1E5C779D0038D2D3 /* Australia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Australia.png; sourceTree = "<group>"; };
+		1EEF3DFB1E5C779D0038D2D3 /* Belgium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Belgium.png; sourceTree = "<group>"; };
+		1EEF3DFC1E5C779D0038D2D3 /* Brazil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Brazil.png; sourceTree = "<group>"; };
+		1EEF3DFD1E5C779D0038D2D3 /* Canada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Canada.png; sourceTree = "<group>"; };
+		1EEF3DFE1E5C779D0038D2D3 /* China.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = China.png; sourceTree = "<group>"; };
+		1EEF3DFF1E5C779D0038D2D3 /* Czech Republic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Czech Republic.png"; sourceTree = "<group>"; };
+		1EEF3E001E5C779D0038D2D3 /* Denmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Denmark.png; sourceTree = "<group>"; };
+		1EEF3E011E5C779D0038D2D3 /* Finland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finland.png; sourceTree = "<group>"; };
+		1EEF3E021E5C779D0038D2D3 /* France.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = France.png; sourceTree = "<group>"; };
+		1EEF3E031E5C779D0038D2D3 /* Germany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Germany.png; sourceTree = "<group>"; };
+		1EEF3E041E5C779D0038D2D3 /* Greece.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Greece.png; sourceTree = "<group>"; };
+		1EEF3E051E5C779D0038D2D3 /* Hong Kong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hong Kong.png"; sourceTree = "<group>"; };
+		1EEF3E061E5C779D0038D2D3 /* Hungary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hungary.png; sourceTree = "<group>"; };
+		1EEF3E071E5C779D0038D2D3 /* India.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = India.png; sourceTree = "<group>"; };
+		1EEF3E081E5C779D0038D2D3 /* Indonesia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Indonesia.png; sourceTree = "<group>"; };
+		1EEF3E091E5C779D0038D2D3 /* Ireland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ireland.png; sourceTree = "<group>"; };
+		1EEF3E0A1E5C779D0038D2D3 /* Italy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italy.png; sourceTree = "<group>"; };
+		1EEF3E0B1E5C779D0038D2D3 /* Japan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japan.png; sourceTree = "<group>"; };
+		1EEF3E0C1E5C779D0038D2D3 /* Korea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Korea.png; sourceTree = "<group>"; };
+		1EEF3E0D1E5C779D0038D2D3 /* Mexico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mexico.png; sourceTree = "<group>"; };
+		1EEF3E0E1E5C779D0038D2D3 /* Netherlands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Netherlands.png; sourceTree = "<group>"; };
+		1EEF3E0F1E5C779D0038D2D3 /* Norway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Norway.png; sourceTree = "<group>"; };
+		1EEF3E101E5C779D0038D2D3 /* Poland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poland.png; sourceTree = "<group>"; };
+		1EEF3E111E5C779D0038D2D3 /* Portugal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portugal.png; sourceTree = "<group>"; };
+		1EEF3E121E5C779D0038D2D3 /* Romania.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Romania.png; sourceTree = "<group>"; };
+		1EEF3E131E5C779D0038D2D3 /* Russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russia.png; sourceTree = "<group>"; };
+		1EEF3E141E5C779D0038D2D3 /* Saudi Arabia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Saudi Arabia.png"; sourceTree = "<group>"; };
+		1EEF3E151E5C779D0038D2D3 /* Slovakia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovakia.png; sourceTree = "<group>"; };
+		1EEF3E161E5C779D0038D2D3 /* South Africa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "South Africa.png"; sourceTree = "<group>"; };
+		1EEF3E171E5C779D0038D2D3 /* Spain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spain.png; sourceTree = "<group>"; };
+		1EEF3E181E5C779D0038D2D3 /* Sweden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sweden.png; sourceTree = "<group>"; };
+		1EEF3E191E5C779D0038D2D3 /* Taiwan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Taiwan.png; sourceTree = "<group>"; };
+		1EEF3E1A1E5C779D0038D2D3 /* Thailand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thailand.png; sourceTree = "<group>"; };
+		1EEF3E1B1E5C779D0038D2D3 /* Turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turkey.png; sourceTree = "<group>"; };
+		1EEF3E1C1E5C779D0038D2D3 /* United Kingdom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United Kingdom.png"; sourceTree = "<group>"; };
+		1EEF3E1D1E5C779D0038D2D3 /* United States.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United States.png"; sourceTree = "<group>"; };
+		1EEF3E431E5D96E60038D2D3 /* iconDownload.cgi-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconDownload.cgi-2.png"; sourceTree = "<group>"; };
+		1EEF3E441E5D96E60038D2D3 /* iconDownload.cgi-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconDownload.cgi-4.png"; sourceTree = "<group>"; };
+		1EEF3E451E5D96E60038D2D3 /* iconDownload.cgi-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconDownload.cgi-6.png"; sourceTree = "<group>"; };
+		1EEF3E461E5D96E60038D2D3 /* iconDownload.cgi-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconDownload.cgi-7.png"; sourceTree = "<group>"; };
+		1EEF3E471E5D96E60038D2D3 /* iconDownload.cgi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconDownload.cgi.png; sourceTree = "<group>"; };
+		3AE33FB94936FF9D134F1734 /* Pods_onsei2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onsei2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		535418BA8283AEB9E0F53D48 /* Pods-onsei2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onsei2.release.xcconfig"; path = "Pods/Target Support Files/Pods-onsei2/Pods-onsei2.release.xcconfig"; sourceTree = "<group>"; };
+		756702CCA959C55F939E5AA6 /* Pods_onsei2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onsei2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58D04C2AD210F8A1CA5F872 /* Pods-onsei2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onsei2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-onsei2/Pods-onsei2.debug.xcconfig"; sourceTree = "<group>"; };
+		E89641406642DD35DA40BE22 /* Pods_onsei2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_onsei2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF297632C8DE2023A8DD285A /* Pods-onsei2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onsei2UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-onsei2UITests/Pods-onsei2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F38C9AEE8341BA69D46637E0 /* Pods-onsei2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onsei2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-onsei2UITests/Pods-onsei2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		F7419A59990E28D25BEEEB32 /* Pods-onsei2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onsei2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-onsei2Tests/Pods-onsei2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E98E0BE1E5AE3F50040A543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145880ACC2AEB78018F45885 /* Pods_onsei2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E98E0D21E5AE3F50040A543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3CA6668B7D3175AB19166A /* Pods_onsei2Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E98E0DD1E5AE3F50040A543 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D194C489B3AF481791BEA0 /* Pods_onsei2UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E11225F1E627E26000519A5 /* slider */ = {
+			isa = PBXGroup;
+			children = (
+				1E1122601E627E26000519A5 /* icon_115481_256.png */,
+				1E1122611E627E26000519A5 /* icon_115501_256.png */,
+				1E1122621E627E26000519A5 /* icon_115541_256.png */,
+				1E1122631E627E26000519A5 /* icon_120931_256-2.png */,
+				1E1122641E627E26000519A5 /* icon_120931_256.png */,
+				1E1122651E627E26000519A5 /* icon_148101_256.png */,
+			);
+			path = slider;
+			sourceTree = "<group>";
+		};
+		1E11226E1E69C1F0000519A5 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				1E11226C1E69C1D2000519A5 /* UserData.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		1E98E0B81E5AE3F50040A543 = {
+			isa = PBXGroup;
+			children = (
+				1E98E0C31E5AE3F50040A543 /* onsei2 */,
+				1E98E0D81E5AE3F50040A543 /* onsei2Tests */,
+				1E98E0E31E5AE3F50040A543 /* onsei2UITests */,
+				1E98E0C21E5AE3F50040A543 /* Products */,
+				8D2F1DE51E40D692DD7B3C14 /* Pods */,
+				DE2F7AD00F029836D246B259 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E98E0C21E5AE3F50040A543 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E98E0C11E5AE3F50040A543 /* onsei2.app */,
+				1E98E0D51E5AE3F50040A543 /* onsei2Tests.xctest */,
+				1E98E0E01E5AE3F50040A543 /* onsei2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E98E0C31E5AE3F50040A543 /* onsei2 */ = {
+			isa = PBXGroup;
+			children = (
+				1E11226E1E69C1F0000519A5 /* Realm */,
+				1E11225F1E627E26000519A5 /* slider */,
+				1EEF3E421E5D96E60038D2D3 /* play icon */,
+				1EEF3DF91E5C779D0038D2D3 /* flags */,
+				1E98E0C41E5AE3F50040A543 /* AppDelegate.swift */,
+				1E98E0C61E5AE3F50040A543 /* ViewController.swift */,
+				1E98E0F21E5AE4060040A543 /* TableViewController.swift */,
+				1E98E0CB1E5AE3F50040A543 /* Assets.xcassets */,
+				1E98E0CD1E5AE3F50040A543 /* LaunchScreen.storyboard */,
+				1E98E0F81E5AFDC40040A543 /* Main.storyboard */,
+				1E98E0D01E5AE3F50040A543 /* Info.plist */,
+				1E98E0F41E5AF3CF0040A543 /* TableViewCell.swift */,
+				1E98E0F51E5AF3CF0040A543 /* TableViewCell.xib */,
+			);
+			path = onsei2;
+			sourceTree = "<group>";
+		};
+		1E98E0D81E5AE3F50040A543 /* onsei2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E98E0D91E5AE3F50040A543 /* onsei2Tests.swift */,
+				1E98E0DB1E5AE3F50040A543 /* Info.plist */,
+			);
+			path = onsei2Tests;
+			sourceTree = "<group>";
+		};
+		1E98E0E31E5AE3F50040A543 /* onsei2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E98E0E41E5AE3F50040A543 /* onsei2UITests.swift */,
+				1E98E0E61E5AE3F50040A543 /* Info.plist */,
+			);
+			path = onsei2UITests;
+			sourceTree = "<group>";
+		};
+		1EEF3DF91E5C779D0038D2D3 /* flags */ = {
+			isa = PBXGroup;
+			children = (
+				1EEF3DFA1E5C779D0038D2D3 /* Australia.png */,
+				1EEF3DFB1E5C779D0038D2D3 /* Belgium.png */,
+				1EEF3DFC1E5C779D0038D2D3 /* Brazil.png */,
+				1EEF3DFD1E5C779D0038D2D3 /* Canada.png */,
+				1EEF3DFE1E5C779D0038D2D3 /* China.png */,
+				1EEF3DFF1E5C779D0038D2D3 /* Czech Republic.png */,
+				1EEF3E001E5C779D0038D2D3 /* Denmark.png */,
+				1EEF3E011E5C779D0038D2D3 /* Finland.png */,
+				1EEF3E021E5C779D0038D2D3 /* France.png */,
+				1EEF3E031E5C779D0038D2D3 /* Germany.png */,
+				1EEF3E041E5C779D0038D2D3 /* Greece.png */,
+				1EEF3E051E5C779D0038D2D3 /* Hong Kong.png */,
+				1EEF3E061E5C779D0038D2D3 /* Hungary.png */,
+				1EEF3E071E5C779D0038D2D3 /* India.png */,
+				1EEF3E081E5C779D0038D2D3 /* Indonesia.png */,
+				1EEF3E091E5C779D0038D2D3 /* Ireland.png */,
+				1EEF3E0A1E5C779D0038D2D3 /* Italy.png */,
+				1EEF3E0B1E5C779D0038D2D3 /* Japan.png */,
+				1EEF3E0C1E5C779D0038D2D3 /* Korea.png */,
+				1EEF3E0D1E5C779D0038D2D3 /* Mexico.png */,
+				1EEF3E0E1E5C779D0038D2D3 /* Netherlands.png */,
+				1EEF3E0F1E5C779D0038D2D3 /* Norway.png */,
+				1EEF3E101E5C779D0038D2D3 /* Poland.png */,
+				1EEF3E111E5C779D0038D2D3 /* Portugal.png */,
+				1EEF3E121E5C779D0038D2D3 /* Romania.png */,
+				1EEF3E131E5C779D0038D2D3 /* Russia.png */,
+				1EEF3E141E5C779D0038D2D3 /* Saudi Arabia.png */,
+				1EEF3E151E5C779D0038D2D3 /* Slovakia.png */,
+				1EEF3E161E5C779D0038D2D3 /* South Africa.png */,
+				1EEF3E171E5C779D0038D2D3 /* Spain.png */,
+				1EEF3E181E5C779D0038D2D3 /* Sweden.png */,
+				1EEF3E191E5C779D0038D2D3 /* Taiwan.png */,
+				1EEF3E1A1E5C779D0038D2D3 /* Thailand.png */,
+				1EEF3E1B1E5C779D0038D2D3 /* Turkey.png */,
+				1EEF3E1C1E5C779D0038D2D3 /* United Kingdom.png */,
+				1EEF3E1D1E5C779D0038D2D3 /* United States.png */,
+			);
+			path = flags;
+			sourceTree = "<group>";
+		};
+		1EEF3E421E5D96E60038D2D3 /* play icon */ = {
+			isa = PBXGroup;
+			children = (
+				1EEF3E431E5D96E60038D2D3 /* iconDownload.cgi-2.png */,
+				1EEF3E441E5D96E60038D2D3 /* iconDownload.cgi-4.png */,
+				1EEF3E451E5D96E60038D2D3 /* iconDownload.cgi-6.png */,
+				1EEF3E461E5D96E60038D2D3 /* iconDownload.cgi-7.png */,
+				1EEF3E471E5D96E60038D2D3 /* iconDownload.cgi.png */,
+			);
+			path = "play icon";
+			sourceTree = "<group>";
+		};
+		8D2F1DE51E40D692DD7B3C14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D58D04C2AD210F8A1CA5F872 /* Pods-onsei2.debug.xcconfig */,
+				535418BA8283AEB9E0F53D48 /* Pods-onsei2.release.xcconfig */,
+				F7419A59990E28D25BEEEB32 /* Pods-onsei2Tests.debug.xcconfig */,
+				126569A3DCBE204FABA018CD /* Pods-onsei2Tests.release.xcconfig */,
+				EF297632C8DE2023A8DD285A /* Pods-onsei2UITests.debug.xcconfig */,
+				F38C9AEE8341BA69D46637E0 /* Pods-onsei2UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE2F7AD00F029836D246B259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AE33FB94936FF9D134F1734 /* Pods_onsei2.framework */,
+				756702CCA959C55F939E5AA6 /* Pods_onsei2Tests.framework */,
+				E89641406642DD35DA40BE22 /* Pods_onsei2UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E98E0C01E5AE3F50040A543 /* onsei2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E98E0E91E5AE3F50040A543 /* Build configuration list for PBXNativeTarget "onsei2" */;
+			buildPhases = (
+				575FE796AAE40912D9CA313F /* [CP] Check Pods Manifest.lock */,
+				1E98E0BD1E5AE3F50040A543 /* Sources */,
+				1E98E0BE1E5AE3F50040A543 /* Frameworks */,
+				1E98E0BF1E5AE3F50040A543 /* Resources */,
+				B895BC9649C670257BE6AB8A /* [CP] Embed Pods Frameworks */,
+				222BFAADF638749B53D37603 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = onsei2;
+			productName = onsei2;
+			productReference = 1E98E0C11E5AE3F50040A543 /* onsei2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E98E0D41E5AE3F50040A543 /* onsei2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E98E0EC1E5AE3F50040A543 /* Build configuration list for PBXNativeTarget "onsei2Tests" */;
+			buildPhases = (
+				F1EA170B4B009E4D55763292 /* [CP] Check Pods Manifest.lock */,
+				1E98E0D11E5AE3F50040A543 /* Sources */,
+				1E98E0D21E5AE3F50040A543 /* Frameworks */,
+				1E98E0D31E5AE3F50040A543 /* Resources */,
+				37FD7E5AAC544E07B59286DA /* [CP] Embed Pods Frameworks */,
+				B24B74E2BB9D931ACFA33929 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E98E0D71E5AE3F50040A543 /* PBXTargetDependency */,
+			);
+			name = onsei2Tests;
+			productName = onsei2Tests;
+			productReference = 1E98E0D51E5AE3F50040A543 /* onsei2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E98E0DF1E5AE3F50040A543 /* onsei2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E98E0EF1E5AE3F50040A543 /* Build configuration list for PBXNativeTarget "onsei2UITests" */;
+			buildPhases = (
+				00F274C5B500FF66064955DC /* [CP] Check Pods Manifest.lock */,
+				1E98E0DC1E5AE3F50040A543 /* Sources */,
+				1E98E0DD1E5AE3F50040A543 /* Frameworks */,
+				1E98E0DE1E5AE3F50040A543 /* Resources */,
+				811703DF54A8CAC191A62420 /* [CP] Embed Pods Frameworks */,
+				4538C35A4E36E506C356CA40 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E98E0E21E5AE3F50040A543 /* PBXTargetDependency */,
+			);
+			name = onsei2UITests;
+			productName = onsei2UITests;
+			productReference = 1E98E0E01E5AE3F50040A543 /* onsei2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E98E0B91E5AE3F50040A543 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "原 あゆみ";
+				TargetAttributes = {
+					1E98E0C01E5AE3F50040A543 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Z39DQFT7A6;
+						ProvisioningStyle = Automatic;
+					};
+					1E98E0D41E5AE3F50040A543 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1E98E0C01E5AE3F50040A543;
+					};
+					1E98E0DF1E5AE3F50040A543 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1E98E0C01E5AE3F50040A543;
+					};
+				};
+			};
+			buildConfigurationList = 1E98E0BC1E5AE3F50040A543 /* Build configuration list for PBXProject "onsei2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E98E0B81E5AE3F50040A543;
+			productRefGroup = 1E98E0C21E5AE3F50040A543 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E98E0C01E5AE3F50040A543 /* onsei2 */,
+				1E98E0D41E5AE3F50040A543 /* onsei2Tests */,
+				1E98E0DF1E5AE3F50040A543 /* onsei2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E98E0BF1E5AE3F50040A543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EEF3E361E5C779D0038D2D3 /* Romania.png in Resources */,
+				1E1122691E627E26000519A5 /* icon_120931_256-2.png in Resources */,
+				1EEF3E411E5C779D0038D2D3 /* United States.png in Resources */,
+				1EEF3E1E1E5C779D0038D2D3 /* Australia.png in Resources */,
+				1EEF3E481E5D96E60038D2D3 /* iconDownload.cgi-2.png in Resources */,
+				1EEF3E351E5C779D0038D2D3 /* Portugal.png in Resources */,
+				1E98E0CF1E5AE3F50040A543 /* LaunchScreen.storyboard in Resources */,
+				1EEF3E2F1E5C779D0038D2D3 /* Japan.png in Resources */,
+				1EEF3E2A1E5C779D0038D2D3 /* Hungary.png in Resources */,
+				1E11226B1E627E26000519A5 /* icon_148101_256.png in Resources */,
+				1EEF3E251E5C779D0038D2D3 /* Finland.png in Resources */,
+				1EEF3E331E5C779D0038D2D3 /* Norway.png in Resources */,
+				1EEF3E271E5C779D0038D2D3 /* Germany.png in Resources */,
+				1E1122681E627E26000519A5 /* icon_115541_256.png in Resources */,
+				1E98E0F71E5AF3CF0040A543 /* TableViewCell.xib in Resources */,
+				1EEF3E241E5C779D0038D2D3 /* Denmark.png in Resources */,
+				1E1122671E627E26000519A5 /* icon_115501_256.png in Resources */,
+				1EEF3E381E5C779D0038D2D3 /* Saudi Arabia.png in Resources */,
+				1E98E0CC1E5AE3F50040A543 /* Assets.xcassets in Resources */,
+				1EEF3E231E5C779D0038D2D3 /* Czech Republic.png in Resources */,
+				1EEF3E301E5C779D0038D2D3 /* Korea.png in Resources */,
+				1EEF3E3B1E5C779D0038D2D3 /* Spain.png in Resources */,
+				1EEF3E341E5C779D0038D2D3 /* Poland.png in Resources */,
+				1EEF3E3D1E5C779D0038D2D3 /* Taiwan.png in Resources */,
+				1EEF3E261E5C779D0038D2D3 /* France.png in Resources */,
+				1E98E0F91E5AFDC40040A543 /* Main.storyboard in Resources */,
+				1EEF3E4A1E5D96E60038D2D3 /* iconDownload.cgi-6.png in Resources */,
+				1EEF3E4B1E5D96E60038D2D3 /* iconDownload.cgi-7.png in Resources */,
+				1EEF3E2C1E5C779D0038D2D3 /* Indonesia.png in Resources */,
+				1EEF3E211E5C779D0038D2D3 /* Canada.png in Resources */,
+				1EEF3E291E5C779D0038D2D3 /* Hong Kong.png in Resources */,
+				1EEF3E371E5C779D0038D2D3 /* Russia.png in Resources */,
+				1EEF3E321E5C779D0038D2D3 /* Netherlands.png in Resources */,
+				1EEF3E201E5C779D0038D2D3 /* Brazil.png in Resources */,
+				1EEF3E2E1E5C779D0038D2D3 /* Italy.png in Resources */,
+				1EEF3E391E5C779D0038D2D3 /* Slovakia.png in Resources */,
+				1EEF3E401E5C779D0038D2D3 /* United Kingdom.png in Resources */,
+				1EEF3E311E5C779D0038D2D3 /* Mexico.png in Resources */,
+				1E1122661E627E26000519A5 /* icon_115481_256.png in Resources */,
+				1E11226A1E627E26000519A5 /* icon_120931_256.png in Resources */,
+				1EEF3E221E5C779D0038D2D3 /* China.png in Resources */,
+				1EEF3E3A1E5C779D0038D2D3 /* South Africa.png in Resources */,
+				1EEF3E2B1E5C779D0038D2D3 /* India.png in Resources */,
+				1EEF3E4C1E5D96E60038D2D3 /* iconDownload.cgi.png in Resources */,
+				1EEF3E2D1E5C779D0038D2D3 /* Ireland.png in Resources */,
+				1EEF3E491E5D96E60038D2D3 /* iconDownload.cgi-4.png in Resources */,
+				1EEF3E281E5C779D0038D2D3 /* Greece.png in Resources */,
+				1EEF3E3C1E5C779D0038D2D3 /* Sweden.png in Resources */,
+				1EEF3E1F1E5C779D0038D2D3 /* Belgium.png in Resources */,
+				1EEF3E3E1E5C779D0038D2D3 /* Thailand.png in Resources */,
+				1EEF3E3F1E5C779D0038D2D3 /* Turkey.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E98E0D31E5AE3F50040A543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E98E0DE1E5AE3F50040A543 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00F274C5B500FF66064955DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		222BFAADF638749B53D37603 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onsei2/Pods-onsei2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37FD7E5AAC544E07B59286DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onsei2Tests/Pods-onsei2Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4538C35A4E36E506C356CA40 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onsei2UITests/Pods-onsei2UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		575FE796AAE40912D9CA313F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		811703DF54A8CAC191A62420 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onsei2UITests/Pods-onsei2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24B74E2BB9D931ACFA33929 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onsei2Tests/Pods-onsei2Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B895BC9649C670257BE6AB8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-onsei2/Pods-onsei2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1EA170B4B009E4D55763292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E98E0BD1E5AE3F50040A543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E98E0C71E5AE3F50040A543 /* ViewController.swift in Sources */,
+				1E98E0F61E5AF3CF0040A543 /* TableViewCell.swift in Sources */,
+				1E98E0F31E5AE4060040A543 /* TableViewController.swift in Sources */,
+				1E11226D1E69C1D2000519A5 /* UserData.swift in Sources */,
+				1E98E0C51E5AE3F50040A543 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E98E0D11E5AE3F50040A543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E98E0DA1E5AE3F50040A543 /* onsei2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E98E0DC1E5AE3F50040A543 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E98E0E51E5AE3F50040A543 /* onsei2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E98E0D71E5AE3F50040A543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E98E0C01E5AE3F50040A543 /* onsei2 */;
+			targetProxy = 1E98E0D61E5AE3F50040A543 /* PBXContainerItemProxy */;
+		};
+		1E98E0E21E5AE3F50040A543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E98E0C01E5AE3F50040A543 /* onsei2 */;
+			targetProxy = 1E98E0E11E5AE3F50040A543 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E98E0CD1E5AE3F50040A543 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E98E0CE1E5AE3F50040A543 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E98E0E71E5AE3F50040A543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E98E0E81E5AE3F50040A543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E98E0EA1E5AE3F50040A543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D58D04C2AD210F8A1CA5F872 /* Pods-onsei2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z39DQFT7A6;
+				INFOPLIST_FILE = onsei2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.app.onsei2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1E98E0EB1E5AE3F50040A543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535418BA8283AEB9E0F53D48 /* Pods-onsei2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z39DQFT7A6;
+				INFOPLIST_FILE = onsei2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.app.onsei2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1E98E0ED1E5AE3F50040A543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7419A59990E28D25BEEEB32 /* Pods-onsei2Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = onsei2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.onsei2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/onsei2.app/onsei2";
+			};
+			name = Debug;
+		};
+		1E98E0EE1E5AE3F50040A543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 126569A3DCBE204FABA018CD /* Pods-onsei2Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = onsei2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.onsei2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/onsei2.app/onsei2";
+			};
+			name = Release;
+		};
+		1E98E0F01E5AE3F50040A543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF297632C8DE2023A8DD285A /* Pods-onsei2UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = onsei2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.onsei2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = onsei2;
+			};
+			name = Debug;
+		};
+		1E98E0F11E5AE3F50040A543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F38C9AEE8341BA69D46637E0 /* Pods-onsei2UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = onsei2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.onsei2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = onsei2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E98E0BC1E5AE3F50040A543 /* Build configuration list for PBXProject "onsei2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E98E0E71E5AE3F50040A543 /* Debug */,
+				1E98E0E81E5AE3F50040A543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E98E0E91E5AE3F50040A543 /* Build configuration list for PBXNativeTarget "onsei2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E98E0EA1E5AE3F50040A543 /* Debug */,
+				1E98E0EB1E5AE3F50040A543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E98E0EC1E5AE3F50040A543 /* Build configuration list for PBXNativeTarget "onsei2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E98E0ED1E5AE3F50040A543 /* Debug */,
+				1E98E0EE1E5AE3F50040A543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E98E0EF1E5AE3F50040A543 /* Build configuration list for PBXNativeTarget "onsei2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E98E0F01E5AE3F50040A543 /* Debug */,
+				1E98E0F11E5AE3F50040A543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E98E0B91E5AE3F50040A543 /* Project object */;
+}
