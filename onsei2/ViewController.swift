@@ -38,15 +38,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var talker = AVSpeechSynthesizer()
     var utterance = AVSpeechUtterance()
     var push : Int!
-    var text2 :String = ""
+    var text2 :String = "قم بإدخال النص"
     var tone2 :Double = 0.0
     var volume2 :Double = 0.0
     var speed2 :Double = 0.0
     var languageX :Int!
-        
+    var flagName : String = "SaudiArabia.png"
     
+    static var tag:Int = 0
+    static var id:String = "0"
     
+    var language3 :String! = "Arabic(SaudiArabia)"
+    var textdefault :String! = "قم بإدخال النص"
+    var miteruka :Int! = 0
+    var flagImage : UIImage! = UIImage(named : "Saudi Arabia.png" )
    
+    let realm = try! Realm()
+
     
     
      dynamic var list=["Arabic(SaudiArabia)","English(SouthAfrica)","Thai(Thailand)","Dutch(Belgium)","German (Germany)","English(Australia)","English(UnitedStates)","Portuguese(Brazil)","Polish(Poland)","English(Ireland)","Greek(Greece)","Indonesian(Indonesia)","Swedish(Sweden)","Turkish(Turkey)","Portuguese(Portugal)","Japanese(Japan)","Korean(Korea)","Hungarian(Hungary)","Czech(CzechRepublic)","Danish(Denmark)","Spanish(Mexico)","French(Canada)","Dutch(Netherlands)","Finnish(Finland)","Spanish(Spain)","Italian(Italy)","Romanian(Romania)","Norwegian(Norway)","Chinese(HongKong)","Chinese(Taiwan)","Slovak(Slovakia)","Chinese(China)","Russian(Russia)","English(UnitedKingdom)","French(France)","Hindi (India)"]
@@ -55,16 +63,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     dynamic var languagetext = ["قم بإدخال النص","enter the text","รุณากรอกข้อความ","Typ tekst","Bitte geben Sie den Text","enter the text","enter the text","digite o texto","wpisz tekst","enter the text","Πληκτρολογήστε κείμενο","Teks Masukkan","Skriv text","metin girin","Digite o texto","テキストを入力","텍스트를 입력하십시오","Kérjük írja be a képen","Prosím zadejte text","Indtast teksten","Por favor introduzca el texto","S’il vous plaît entrer le texte","Typ tekst","Ole hyvä ja kirjoita teksti","Por favor  introduzca el texto","Inserisci il testo","Vă rugăm să introduceți textul","Vennligst skriv inn teksten","请输入文字","请输入文字","Prosím zadajte text","请输入文字","Пожалуйста  введите текст","enter the text","S’il vous plaît entrer le texte","अपना पाठ दर्ज करें"]
     
-    var language3 :String!
-    var textdefault :String!
-    var miteruka :Int!
-   
+    dynamic var flaglist = ["Saudi Arabia.png","SouthA frica.png","Thailand.png","Belgium.png"," Germany.png","Australia.png","United States.png","Brazil.png","Poland.png","Ireland.png","Greece.png","Indonesia.png","Sweden.png","Turkey.png","Portugal.png","Japan.png","Korea.png","Hungary.png","Czech Republic.png","Denmark.png","Mexico.png","Canada.png","Netherlands.png","Finland.png","Spain.png","Italy.png","Romania.png","Norway.png","Hong Kong.png","Taiwan.png","Slovakia.png","China.png","Russia.png","United Kingdom.png","France.png","India.png"]
+
+    
+
+    
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
         talker.speak(utterance)
         push = 0
         playpauseimage.image = UIImage(named: "iconDownload.cgi.png")
+
+        print("最初は\(flagImage)")
+
         
         /*      // 話す速度を設定（0.0〜1.0）
          utterance.rate = 0.5
@@ -76,7 +89,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         // UISliderの最大値・最小値を指定
         soundslider.minimumValue = 0.0
-        soundslider.maximumValue = 100.0
+        soundslider.maximumValue = 1.0
         
         speedslider.minimumValue = 0.0
         speedslider.maximumValue = 1.0
@@ -84,11 +97,36 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         toneslider.minimumValue = 0.5
         toneslider.maximumValue = 2.0
         // UISliderの初期値を指定
-        soundslider.setValue(50.0, animated: true)
+        soundslider.setValue(0.5, animated: true)
         speedslider.setValue(0.5, animated: true)
         toneslider.setValue(1.25, animated: true)
         self.talker.delegate = self
-        //   speechText.text = String(textdefault)
+        speechText.text = String(textdefault)
+        
+        
+        print("tag:" + String(ViewController.tag))
+        print("id:" + String(ViewController.id))
+        
+        
+        if ViewController.tag == 1 {
+            let Items = realm.objects(UserData.self)
+                //.filter("karteId == %@",ViewController.id )
+            
+            if Items.count == 1 {
+                
+                 speechText?.text = Items[0].text
+                 tone2 = Items[0].tone
+                 speed2 = Items[0].speed
+                 volume2 = Items[0].volume
+                 languageX = Items[0].language
+                
+ 
+                
+            }
+            
+            
+        }
+
         
         
     }
@@ -105,6 +143,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return list[row] as String
         return language2[row] as String
         language3 = String(language2[row])
+
         
     }
     
@@ -116,12 +155,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         language3 = String(language2[row])
         textdefault = String(languagetext[row])
         speechText.text = String(textdefault)
+        flagName = String(flaglist[row])
+        flagImage = UIImage(named: flagName)
         print("見てるか\(miteruka)")
+        print("旗\(flaglist[row])")
+        print(flagName)
+
 
         
     }
     
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer!, didFinishSpeechUtterance utterance: AVSpeechUtterance!)
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance)
     {
         print("***終了***")
         push = 0
@@ -239,13 +283,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         newText.volume = Double(utterance.volume)
         newText.tone = Double(utterance.pitchMultiplier)
         newText.language = miteruka
+         print("これ\(flagImage)")
+        newText.flag = UIImagePNGRepresentation(flagImage)! as NSData
                 
         print(newText.text)
         print(newText.volume)
         print(newText.speed)
         print(newText.tone)
         print(newText.language)
-        
+                
         // 上記で代入したテキストデータを永続化するための処理
         do{
             let realm = try Realm()

@@ -13,13 +13,14 @@ import RealmSwift
 class TableViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet var listLabel: UILabel!
-    @IBOutlet var flagimage: UIImageView!
+    @IBOutlet var flagimage2: UIImageView!
     
     var realmUser : UserData!
-    
-    
     var Items: Results<UserData>!
     let newText = UserData()
+    
+   
+    
    
     
     
@@ -35,7 +36,7 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+                
         do{
             let realm = try Realm()
             Items = realm.objects(UserData.self)
@@ -54,8 +55,10 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)->Int {
-        return Items.count
+        let count = Items.count
+        return count
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
         
@@ -64,6 +67,7 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
         let object = Items[indexpath.row]
         
         cell.textLabel?.text = object.text
+        cell.imageView?.image = UIImage(data: object.flag as Data)
 //        flagimage.image = UIImage(named:flaglist[object.language])
             
         
@@ -97,25 +101,27 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
   
     
     @IBAction func save(_ sender: Any) {
-        
+        ViewController.tag = 2
         performSegue(withIdentifier: "toSecondViewController", sender: self)
         
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+          ViewController.tag = 1
+          ViewController.id = Items[indexPath.row].text
         
+
         performSegue(withIdentifier: "toSecondViewController", sender: self)
         
         print("タップされたセルのindex番号: \(indexPath.row)")
+               
     }
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "toSecondViewController" {
-            
-                      
+               
             // 変数:遷移先ViewController型 = segue.destinationViewController as 遷移先ViewController型
             // segue.destinationViewController は遷移先のViewController
             
@@ -125,14 +131,8 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
     }
     
     
-    
 }
-    
-    
- 
-    
-    
-    
+
     
     /*
      // MARK: - Navigation
