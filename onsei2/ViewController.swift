@@ -11,7 +11,7 @@ import AVFoundation
 import RealmSwift
 
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,AVSpeechSynthesizerDelegate {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,AVSpeechSynthesizerDelegate,UITextFieldDelegate,UITextViewDelegate {
     /** 話す内容を入力するテキストフィールド */
     @IBOutlet weak var speechText: UITextView!
     //    @IBOutlet weak var languagePickerView: UIPickerView!
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var playpauseimage: UIImageView!
     @IBOutlet weak var stopimage: UIImageView!
     @IBOutlet weak var startimage: UIImageView!
-    
+    @IBOutlet weak var placeFoldertext : UILabel!
     
         
     
@@ -37,23 +37,27 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     /** SpeechSynthesizerクラス */
     var talker = AVSpeechSynthesizer()
     var utterance = AVSpeechUtterance()
-    var push : Int!
-    var text2 :String = "قم بإدخال النص"
-    var tone2 :Double = 0.0
-    var volume2 :Double = 0.0
-    var speed2 :Double = 0.0
-    var languageX :Int!
-    var flagName : String = "SaudiArabia.png"
+    static var push : Int!
+    static var text2 :String = "قم بإدخال النص"
+    static var tone2 :Double = 0.0
+    static var volume2 :Double = 0.0
+    static var speed2 :Double = 0.0
+    static var languageX :Int!
+    static var flagName : String = "SaudiArabia.png"
     
     static var tag:Int = 0
     static var id:String = "0"
     
-    var language3 :String! = "Arabic(SaudiArabia)"
-    var textdefault :String! = "قم بإدخال النص"
+    static var language3 :String! = "Arabic(SaudiArabia)"
+    static var textdefault :String! = "قم بإدخال النص"
     var miteruka :Int! = 0
-    var flagImage : UIImage! = UIImage(named : "Saudi Arabia.png" )
+    static var flagImage : UIImage! = UIImage(named : "Saudi Arabia.png" )
+    var friends : Int = TableViewController.sugoi
+    var textTag : Int = 0
    
     let realm = try! Realm()
+    
+    
 
     
     
@@ -63,7 +67,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     dynamic var languagetext = ["قم بإدخال النص","enter the text","รุณากรอกข้อความ","Typ tekst","Bitte geben Sie den Text","enter the text","enter the text","digite o texto","wpisz tekst","enter the text","Πληκτρολογήστε κείμενο","Teks Masukkan","Skriv text","metin girin","Digite o texto","テキストを入力","텍스트를 입력하십시오","Kérjük írja be a képen","Prosím zadejte text","Indtast teksten","Por favor introduzca el texto","S’il vous plaît entrer le texte","Typ tekst","Ole hyvä ja kirjoita teksti","Por favor  introduzca el texto","Inserisci il testo","Vă rugăm să introduceți textul","Vennligst skriv inn teksten","请输入文字","请输入文字","Prosím zadajte text","请输入文字","Пожалуйста  введите текст","enter the text","S’il vous plaît entrer le texte","अपना पाठ दर्ज करें"]
     
-    dynamic var flaglist = ["Saudi Arabia.png","SouthA frica.png","Thailand.png","Belgium.png"," Germany.png","Australia.png","United States.png","Brazil.png","Poland.png","Ireland.png","Greece.png","Indonesia.png","Sweden.png","Turkey.png","Portugal.png","Japan.png","Korea.png","Hungary.png","Czech Republic.png","Denmark.png","Mexico.png","Canada.png","Netherlands.png","Finland.png","Spain.png","Italy.png","Romania.png","Norway.png","Hong Kong.png","Taiwan.png","Slovakia.png","China.png","Russia.png","United Kingdom.png","France.png","India.png"]
+    dynamic var flaglist = ["Saudi Arabia.png","SouthA frica.png","Thailand.png","Belgium.png","Germany.png","Australia.png","United States.png","Brazil.png","Poland.png","Ireland.png","Greece.png","Indonesia.png","Sweden.png","Turkey.png","Portugal.png","Japan.png","Korea.png","Hungary.png","Czech Republic.png","Denmark.png","Mexico.png","Canada.png","Netherlands.png","Finland.png","Spain.png","Italy.png","Romania.png","Norway.png","Hong Kong.png","Taiwan.png","Slovakia.png","China.png","Russia.png","United Kingdom.png","France.png","India.png"]
 
     
 
@@ -73,10 +77,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad(){
         super.viewDidLoad()
         talker.speak(utterance)
-        push = 0
+        ViewController.push = 0
         playpauseimage.image = UIImage(named: "iconDownload.cgi.png")
+    
 
-        print("最初は\(flagImage)")
+        print("最初は\(ViewController.flagImage)")
 
         
         /*      // 話す速度を設定（0.0〜1.0）
@@ -101,35 +106,49 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         speedslider.setValue(0.5, animated: true)
         toneslider.setValue(1.25, animated: true)
         self.talker.delegate = self
-        speechText.text = String(textdefault)
+        speechText?.delegate = self
+       
+        
+        // 仮のサイズでツールバー生成
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default  // スタイルを設定
+        
+        kbToolBar.sizeToFit()  // 画面幅に合わせてサイズを変更
+        
+        // スペーサー
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        
+        // 閉じるボタン
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(ViewController.commitButtonTapped))
         
         
+        kbToolBar.items = [spacer, commitButton]
+        
+        
+        speechText.inputAccessoryView = kbToolBar
+        
+        
+        
+        placeFoldertext.text = String(ViewController.textdefault)
+        placeFoldertext.textColor = UIColor.gray
+
         print("tag:" + String(ViewController.tag))
         print("id:" + String(ViewController.id))
         
-        
-        if ViewController.tag == 1 {
-            let Items = realm.objects(UserData.self)
-                //.filter("karteId == %@",ViewController.id )
-            
-            if Items.count == 1 {
-                
-                 speechText?.text = Items[0].text
-                 tone2 = Items[0].tone
-                 speed2 = Items[0].speed
-                 volume2 = Items[0].volume
-                 languageX = Items[0].language
-                
- 
-                
-            }
-            
-            
+        if ViewController.tag == 1{
+            languagePickerView?.selectRow(friends, inComponent: 0, animated: true)
+            ViewController.volume2 = TableViewController.onryou
+            ViewController.speed2 = TableViewController.hayasa
+            ViewController.tone2 = TableViewController.ontei
+                       
         }
-
         
-        
+                
     }
+    
+    
+    
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -142,7 +161,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return list[row] as String
         return language2[row] as String
-        language3 = String(language2[row])
+        ViewController.language3 = String(language2[row])
 
         
     }
@@ -151,15 +170,24 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         print("列: \(row)")
         print("値: \(list[row])")
         print("言語\(language2[row])")
+        print("textTag",textTag)
         miteruka = Int(row)
-        language3 = String(language2[row])
-        textdefault = String(languagetext[row])
-        speechText.text = String(textdefault)
-        flagName = String(flaglist[row])
-        flagImage = UIImage(named: flagName)
+        ViewController.language3 = String(language2[row])
+        ViewController.textdefault = String(languagetext[row])
+        ViewController.flagName = String(flaglist[row])
+        ViewController.flagImage = UIImage(named: ViewController.flagName)
         print("見てるか\(miteruka)")
         print("旗\(flaglist[row])")
-        print(flagName)
+        print(ViewController.flagName)
+        if textTag == 0 {
+            placeFoldertext.text = String(ViewController.textdefault)
+                   }
+        
+        if speechText.text == "" {
+            placeFoldertext.text = String(ViewController.textdefault)
+                   }
+        
+     
 
 
         
@@ -168,48 +196,77 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance)
     {
         print("***終了***")
-        push = 0
+        ViewController.push = 0
         
     }
     
     
+    
+    func commitButtonTapped(){
+        self.view.endEditing(true)
+        textTag = 1
+        print("閉じてる？")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool{
+        placeFoldertext.isHidden = true
+        print("隠れました")
+        return true
+        
+    }
+    
+    //textviewからフォーカスが外れて、TextViewが空だったらLabelを再び表示
+     func textViewDidEndEditing(_ textView: UITextView) {
+        
+        if(speechText.text.isEmpty){
+            placeFoldertext.isHidden = false
+        }
+        print("空です")
+    }
+    
+    
+  
+    
+       
       @IBAction func stopbutton(sender: UIButton){
         talker.stopSpeaking(at: AVSpeechBoundary.immediate)
-        push = 0
-        print("ストップ\(push)")
+        ViewController.push = 0
+        print("ストップ\(ViewController.push)")
     //    stopimage.image = UIImage(named: "iconDownload.cgi-4.png")
         
     }
     
     @IBAction func startbutton(sender: UIButton){
         talker.stopSpeaking(at: AVSpeechBoundary.immediate)
-       push = 0
-        print("スタート\(push)")
+       ViewController.push = 0
+        print("スタート\(ViewController.push)")
     //    startimage.image = UIImage(named: "iconDownload.cgi-6.png")
     }
     
-/*    @IBAction func play(sender: UIButton){
-        talker.continueSpeaking()
-        
-    }
-*/
     
     @IBAction func playbutton(){
-        print("プレイ\(push)")
-        if push < 1 {
+        print("プレイ\(ViewController.push)")
+        if ViewController.push < 1 {
             
             // 話す内容をセット
             let utterance = AVSpeechUtterance(string:self.speechText.text!)
+            print(speechText.text)
             // 言語を設定
-            utterance.voice = AVSpeechSynthesisVoice(language:language3)
+            utterance.voice = AVSpeechSynthesisVoice(language:ViewController.language3)
+            print("話している内容は",ViewController.language3)
             // 実行
             utterance.rate = speedslider.value
             utterance.volume = soundslider.value
             utterance.pitchMultiplier = toneslider.value
             self.talker.speak(utterance)
-            push = push + 1
+            ViewController.push = ViewController.push + 1
             
-            print("ハゲ\(push)")
+            print("ハゲ\(ViewController.push)")
             
             
         } else if talker.isSpeaking && !talker.isPaused{
@@ -217,13 +274,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             talker.pauseSpeaking(at: AVSpeechBoundary.immediate)
             playpauseimage.image = UIImage(named: "iconDownload.cgi-7.png")
             
-            print("アホ\(push)")
+            print("アホ\(ViewController.push)")
             
         }else if talker.isPaused && talker.isSpeaking
         {
             talker.continueSpeaking()
             playpauseimage.image = UIImage(named: "iconDownload.cgi.png")
-            print("バカ\(push)")
+            print("バカ\(ViewController.push)")
             
             
         print("---------")
@@ -231,21 +288,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         print(talker.isPaused)
         }
     }
-        
     
     
- /*   @IBAction func didTapUSButton(sender: UIButton)
-     {
-     // 話す内容をセット
-     let utterance = AVSpeechUtterance(string:self.speechText.text!)
-     // 言語を英語に設定
-     utterance.voice = AVSpeechSynthesisVoice(language: "es-US")
-     // 実行
-     self.talker.speak(utterance)
-     }
-     
-*/
-     @IBAction func speedsliderChanged(_ sender: UISlider) {
+
+    
+    
+      @IBAction func speedsliderChanged(_ sender: UISlider) {
    
      //UILabelの値を更新
      //sender.valueでUISliderの値が取得可能
@@ -283,8 +331,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         newText.volume = Double(utterance.volume)
         newText.tone = Double(utterance.pitchMultiplier)
         newText.language = miteruka
-         print("これ\(flagImage)")
-        newText.flag = UIImagePNGRepresentation(flagImage)! as NSData
+         print("これ\(ViewController.flagImage)")
+        newText.flag = UIImagePNGRepresentation(ViewController.flagImage)! as NSData
                 
         print(newText.text)
         print(newText.volume)
@@ -304,6 +352,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         //  self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    
  
     
 }

@@ -18,18 +18,18 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
     var realmUser : UserData!
     var Items: Results<UserData>!
     let newText = UserData()
-    
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
+    static var sugoi : Int = 0
+    static var onryou : Double = 0.0
+    static var hayasa : Double = 0.0
+    static var ontei : Double = 0.0
+
    
     
-   
     
     
     dynamic var flaglist = ["SaudiArabia.png","SouthAfrica.png","Thailand.png","Belgium.png"," Germany.png","Australia.png","UnitedStates.png","Brazil.png","Poland.png","Ireland.png","Greece.png","Indonesia.png","Sweden.png","Turkey.png","Portugal.png","Japan.png","Korea.png","Hungary.png","CzechRepublic.png","Denmark.png","Mexico.png","Canada.png","Netherlands.png","Finland.png","Spain.png","Italy.png","Romania.png","Norway.png","HongKong.png","Taiwan.png","Slovakia.png","China.png","Russia.png","UnitedKingdom.png","France.png","India.png"]
-    
-    
-
-
-    
+   
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -46,6 +46,7 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
         }
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,7 +65,7 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        let object = Items[indexpath.row]
+        let object : UserData = Items[indexpath.row]
         
         cell.textLabel?.text = object.text
         cell.imageView?.image = UIImage(data: object.flag as Data)
@@ -98,36 +99,71 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
         tableView.reloadData()
     }
     
-  
-    
-    @IBAction func save(_ sender: Any) {
+    @IBAction func add1(_ sender: Any) {
         ViewController.tag = 2
-        performSegue(withIdentifier: "toSecondViewController", sender: self)
-        
+        self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+    
+        print("追加")
         
     }
+    
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    print("maple",ViewController.tag)
+    
+    let realm = try! Realm()
+    let Items = realm.objects(UserData.self).filter("text == %@",ViewController.id)
+   
+    
+    
+        print( "huhu",Items.count)
+        print("タグ", ViewController.tag)
+        
+        if  Items.count == 1 {
+            
+            print("tuuka")
+            
+            ViewController.textdefault = Items[0].text
+            ViewController.tone2 = Items[0].tone
+            ViewController.speed2 = Items[0].speed
+            ViewController.volume2 = Items[0].volume
+            ViewController.languageX = Items[0].language
+                        
+            
+            print(Items[0].text)
+            print(Items[0].tone)
+            print(Items[0].speed)
+            print(Items[0].volume)
+            print(Items[0].language)
+            
+            // 変数:遷移先ViewController型 = segue.destinationViewController as 遷移先ViewController型
+            // segue.destinationViewController は遷移先のViewController
+            
+        }
+        
+    }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
           ViewController.tag = 1
           ViewController.id = Items[indexPath.row].text
+          TableViewController.sugoi = Items[indexPath.row].language
+          TableViewController.onryou = Items[indexPath.row].volume
+          TableViewController.hayasa = Items[indexPath.row].speed
+          TableViewController.ontei = Items[indexPath.row].tone
+        
+          print("すごーい",Items[indexPath.row].language)
+        
+        
         
 
         performSegue(withIdentifier: "toSecondViewController", sender: self)
         
         print("タップされたセルのindex番号: \(indexPath.row)")
-               
-    }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "toSecondViewController" {
-               
-            // 変数:遷移先ViewController型 = segue.destinationViewController as 遷移先ViewController型
-            // segue.destinationViewController は遷移先のViewController
-            
-           
-        }
         
+               
     }
     
     

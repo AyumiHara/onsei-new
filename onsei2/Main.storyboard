@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" id="7rm-tT-7Oo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FfD-55-6Ev">
                             <connections>
-                                <action selector="save:" destination="1U5-L9-wUD" id="5Tp-gh-Oi5"/>
+                                <action selector="add1:" destination="1U5-L9-wUD" id="f95-1c-Uih"/>
                                 <segue destination="BYZ-38-t0r" kind="push" identifier="toSecondViewController" id="yoH-jL-six"/>
                             </connections>
                         </barButtonItem>
@@ -71,11 +71,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7U6-za-m78">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U6-za-m78">
                                         <rect key="frame" x="8" y="62" width="359" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="La8-HA-7Qv">
@@ -160,6 +160,13 @@
                                         <rect key="frame" x="12" y="486" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uh-QY-HlR">
+                                        <rect key="frame" x="9" y="130" width="355" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.7725490196" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -175,10 +182,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="languagePickerView" destination="La8-HA-7Qv" id="9tA-9Z-cIG"/>
+                        <outlet property="placeFoldertext" destination="7uh-QY-HlR" id="5lg-x4-Bu9"/>
                         <outlet property="playpausebutton" destination="0zy-lx-Ljd" id="bK7-AU-p9G"/>
                         <outlet property="playpauseimage" destination="ZeZ-gb-zZa" id="PPj-2G-uTF"/>
                         <outlet property="soundslider" destination="A0L-Ex-v8C" id="Cuw-LQ-fNH"/>
-                        <outlet property="speechText" destination="7U6-za-m78" id="P8m-jO-3o3"/>
+                        <outlet property="speechText" destination="7U6-za-m78" id="BJD-t3-1Jj"/>
                         <outlet property="speedslider" destination="yy5-7t-vfl" id="EPS-fk-XCb"/>
                         <outlet property="startimage" destination="ICI-sw-lgW" id="rWb-8x-BGv"/>
                         <outlet property="stopimage" destination="x5b-Ad-MQ1" id="qvd-V3-SCk"/>
