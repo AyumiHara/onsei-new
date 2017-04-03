@@ -1,15 +1,13 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E7D9D157EEAC53D271DE045244B7A5596CF0F9B1",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D42047E58BAEAD4AA2BC3468784C5E970B1B995A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "E7D9D157EEAC53D271DE045244B7A5596CF0F9B1" : 9223372036854775807,
     "D42047E58BAEAD4AA2BC3468784C5E970B1B995A" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3A1971B8-271B-40EC-AD01-4CADD93F928A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E7D9D157EEAC53D271DE045244B7A5596CF0F9B1" : "onsei2.xcworkspace\/",
     "D42047E58BAEAD4AA2BC3468784C5E970B1B995A" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : ".",
@@ -24,7 +22,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AyumiHara\/onsei-new-master.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7D9D157EEAC53D271DE045244B7A5596CF0F9B1"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D42047E58BAEAD4AA2BC3468784C5E970B1B995A"
     }
   ]
 }
