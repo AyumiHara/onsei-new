@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XHD-bt-sU3" id="fu6-Hr-aaQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" id="7rm-tT-7Oo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FfD-55-6Ev">
                             <connections>
-                                <action selector="add1:" destination="1U5-L9-wUD" id="f95-1c-Uih"/>
+                                <action selector="add1:" destination="1U5-L9-wUD" id="Ghc-Ml-RGF"/>
                                 <segue destination="BYZ-38-t0r" kind="push" identifier="toSecondViewController" id="yoH-jL-six"/>
                             </connections>
                         </barButtonItem>

@@ -101,10 +101,10 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
     
     @IBAction func add1(_ sender: Any) {
         ViewController.tag = 2
+        print("追加")
         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
     
-        print("追加")
-        
+              
     }
     
     
@@ -129,7 +129,7 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
             ViewController.speed2 = Items[0].speed
             ViewController.volume2 = Items[0].volume
             ViewController.languageX = Items[0].language
-                        
+
             
             print(Items[0].text)
             print(Items[0].tone)
@@ -152,6 +152,7 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
           TableViewController.onryou = Items[indexPath.row].volume
           TableViewController.hayasa = Items[indexPath.row].speed
           TableViewController.ontei = Items[indexPath.row].tone
+          print("音量はこれくらい",Items[indexPath.row].language)
         
           print("すごーい",Items[indexPath.row].language)
         

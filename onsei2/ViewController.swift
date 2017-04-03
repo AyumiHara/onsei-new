@@ -232,7 +232,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
   
     
-       
+  //MARK: - button
       @IBAction func stopbutton(sender: UIButton){
         talker.stopSpeaking(at: AVSpeechBoundary.immediate)
         ViewController.push = 0
