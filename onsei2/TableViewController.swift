@@ -100,7 +100,6 @@ class TableViewController: UIViewController , UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func add1(_ sender: Any) {
-        ViewController.tag = 2
         print("追加")
         self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
     

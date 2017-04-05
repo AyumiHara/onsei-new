@@ -140,10 +140,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             ViewController.volume2 = TableViewController.onryou
             ViewController.speed2 = TableViewController.hayasa
             ViewController.tone2 = TableViewController.ontei
-                       
-        }
+            placeFoldertext.isHidden = true
+            speechText.text = String(ViewController.textdefault)
+            
         
-                
+ 
+                       
+        }         
+        
+        
     }
     
     
@@ -162,6 +167,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return list[row] as String
         return language2[row] as String
         ViewController.language3 = String(language2[row])
+        
 
         
     }
@@ -225,9 +231,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         if(speechText.text.isEmpty){
             placeFoldertext.isHidden = false
+             print("空です")
         }
-        print("空です")
-    }
+           }
     
     
   
